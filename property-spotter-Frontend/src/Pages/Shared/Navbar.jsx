@@ -9,10 +9,10 @@ const Navbar = () => {
   const { user, logOut, loading } = useContext(AuthContext);
   const [scrollY, setScrollY] = useState(0);
   const [isMenuOpen, setIsMenuOPen] = useState(false);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const handleLogOut = async () => {
-    await logOut()
-    navigate('/')
+    await logOut();
+    navigate("/");
   };
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const Navbar = () => {
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center justify-between gap-5 py-3.5 px-6 lg:px-0">
             <Link to={"/"} className="flex items-center">
-              <img className="w-28" src={logo} alt="logo"/>
+              <img className="w-64" src={logo} alt="logo" />
             </Link>
             <div className="md:hidden flex items-center gap-2">
               <div className="">
@@ -106,7 +106,13 @@ const Navbar = () => {
                 <div className="dropdown cursor-pointer pt-1 dropdown-end">
                   <div className="avatar" tabIndex={0}>
                     <div className="w-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                      <img src={user?.photoURL || "https://i.ibb.co/wNXrMXd/images.png"} alt="" />
+                      <img
+                        src={
+                          user?.photoURL ||
+                          "https://i.ibb.co/wNXrMXd/images.png"
+                        }
+                        alt=""
+                      />
                     </div>
                   </div>
                   <ul
