@@ -8,7 +8,7 @@ import BannerImage from "../../assets/images/banner.svg";
 const Banner = ({ search, setSearch, mainData, filterData }) => {
   return (
     <div
-      className="flex justify-center items-center bg-primary bg-no-repeat bg-bottom w-full h-[550px] -mt-[276px]"
+      className="flex justify-center items-center bg-primary bg-no-repeat bg-bottom w-full h-[550px]"
       style={{ backgroundImage: `url(${BannerImage})` }}
     >
       <div className="relative text-center space-y-5 w-full md:w-1/2 mx-auto">
